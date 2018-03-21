@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Sprite Reference
+sprite_index = PlayerAnim_Spr;
+image_speed = 0;
+
 
 // Gravity setup
 
