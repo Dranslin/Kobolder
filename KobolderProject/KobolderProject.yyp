@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "01994922-5d97-4601-8d17-7d99f31d3901",
+            "Value": {
+                "id": "19f4206e-9fe3-4986-b3e8-c5d95c95bdef",
+                "resourcePath": "objects\\Block_Obj\\Block_Obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "041c9eeb-d6fa-4114-a7ca-dc00bcb6cde2",
             "Value": {
                 "id": "ec9ea9a2-f726-4874-bb43-0909ba974c12",
@@ -47,11 +55,27 @@
             }
         },
         {
+            "Key": "1d572e80-22c4-4a79-bc13-58a162e04884",
+            "Value": {
+                "id": "4160ae27-7a16-4270-816b-4653be2126a6",
+                "resourcePath": "sprites\\Block_Spr\\Block_Spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2bd8666c-d6c6-4a55-bc2c-480cee5699dc",
             "Value": {
                 "id": "b000d994-d1db-4884-9409-32486e0fa8d2",
                 "resourcePath": "views\\2bd8666c-d6c6-4a55-bc2c-480cee5699dc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "30bfc880-af37-48c6-85e9-83636be4eac8",
+            "Value": {
+                "id": "0ab7bc5d-10ee-46bf-b748-a1ff471a4ef3",
+                "resourcePath": "objects\\Swipe_Obj\\Swipe_Obj.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -76,6 +100,14 @@
                 "id": "078659a6-40e5-4f92-97aa-094336edbcec",
                 "resourcePath": "views\\4b55b812-4635-4ed3-89b4-b92191887297.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6e4ad463-0464-45f0-bdb2-6bf4d67b0371",
+            "Value": {
+                "id": "9cee18a5-e100-4387-a4fc-432c0f68b54e",
+                "resourcePath": "sprites\\sprite5\\sprite5.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -116,6 +148,14 @@
                 "id": "84ac61e0-7cc1-4b97-989d-c8eabd1a1a52",
                 "resourcePath": "views\\9f7c8e39-168e-4563-87e4-a84984a331a3.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9f94167d-296e-47b2-b4dd-a8eb6d08322f",
+            "Value": {
+                "id": "c86e1005-a45a-45bb-815f-4cd60b802819",
+                "resourcePath": "sprites\\Swipe_Spr\\Swipe_Spr.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

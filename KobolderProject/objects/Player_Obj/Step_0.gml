@@ -8,11 +8,12 @@
 
 //key_up = -keyboard_check(ord("W"));
 //key_down = keyboard_check(ord("S")); 
-key_left = -keyboard_check(ord("A")) || -keyboard_check(vk_left);
-key_right = keyboard_check(ord("D")) || keyboard_check(vk_right);
+key_left = -keyboard_check(ord("A"));
+key_right = keyboard_check(ord("D"));
 key_shift = keyboard_check(vk_shift);
 //key_jump_hold = keyboard_check(vk_space);
 key_jump = keyboard_check_pressed(vk_space);
+key_attack = keyboard_check_pressed(ord("F"));
                                                                                                                                                   
 // Movement controls
 
@@ -79,6 +80,12 @@ if ( key_jump )
 
 x += horiz_speed;
 y += vert_speed;
+
+
+// Swipe attack
+
+if (key_attack) instance_create_layer(x, y, "Attack_Lyr", Swipe_Obj);
+
 
 
 // Animations
