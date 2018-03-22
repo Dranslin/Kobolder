@@ -127,6 +127,22 @@
             }
         },
         {
+            "Key": "832f2c51-57b2-4fd7-a09d-e762ca58a2ad",
+            "Value": {
+                "id": "a4517038-d4df-4032-9006-4a303eca0b36",
+                "resourcePath": "sprites\\Tileset_Spr\\Tileset_Spr.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8c0a49f1-8585-4f64-8693-51d5222a293a",
+            "Value": {
+                "id": "aeb78ab0-e059-4f87-9792-4f02c0bd6d47",
+                "resourcePath": "tilesets\\Terrain_Til\\Terrain_Til.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "8e1ff072-acbe-42f1-909b-fa82f19599c4",
             "Value": {
                 "id": "643e5b97-e608-4342-b0ea-e746d5c2baca",
@@ -239,6 +255,14 @@
             }
         },
         {
+            "Key": "ea788e41-e765-4839-ba0c-f24e9130ba48",
+            "Value": {
+                "id": "5d50662c-e03e-4a74-9ebf-c24400b7b197",
+                "resourcePath": "objects\\Camera_Obj\\Camera_Obj.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "eb2ce431-ab31-4a08-9740-06552bbaf684",
             "Value": {
                 "id": "13d5b8ce-a5b5-4d16-9c6e-c3f61d2d33ff",
@@ -268,6 +292,14 @@
                 "id": "5af513ce-481b-41ba-96fe-693847007272",
                 "resourcePath": "views\\fda9ee7a-5861-451e-977c-2a27810e3c62.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "fff41a6a-a9f7-4a35-87e5-260aba679a33",
+            "Value": {
+                "id": "be64c754-fbe4-4230-8534-286f881837e7",
+                "resourcePath": "tilesets\\Collision_Til\\Collision_Til.yy",
+                "resourceType": "GMTileSet"
             }
         }
     ],
