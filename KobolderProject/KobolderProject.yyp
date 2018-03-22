@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "6942445d-c4ad-4c65-a2c4-da3e2454dba6",
+            "Value": {
+                "id": "d4ac048c-53fb-4721-841a-b69b9d9adf77",
+                "resourcePath": "fonts\\fDebug\\fDebug.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "6e4ad463-0464-45f0-bdb2-6bf4d67b0371",
             "Value": {
                 "id": "9cee18a5-e100-4387-a4fc-432c0f68b54e",
