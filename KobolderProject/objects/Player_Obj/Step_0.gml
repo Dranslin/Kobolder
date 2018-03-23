@@ -228,6 +228,7 @@ if (horiz_speed != 0) image_xscale = sign(horiz_speed);
 // End Dash
 if (isDashing == true) && (current_time - timeDashed > dashLength) { isDashing = false; timeDashed = 0; }
 
+horiz_speed_ref = horiz_speed;
 horiz_speed = 0;
 
 timeIndex = current_time;

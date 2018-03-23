@@ -11,7 +11,7 @@ draw_set_color(c_black);
 draw_rectangle(0,0,512,174,0);
 draw_set_color(c_white);
 draw_text(12,12,"X: " + string(x) + " Y: " + string(y));
-draw_text(12,30,"hsp: " + string(horiz_speed) + " vsp: " + string(vert_speed));
+draw_text(12,30,"hsp: " + string(horiz_speed_ref) + " vsp: " + string(vert_speed));
 draw_text(12,46, "OnGround: " + string(onGround));
 draw_text(12,60, "key Right: " + string(key_right));
 draw_text(12,70, "key Left: " + string(key_left));

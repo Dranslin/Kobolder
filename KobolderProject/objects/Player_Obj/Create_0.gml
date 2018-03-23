@@ -18,6 +18,7 @@ grav = 0.4;
 walk_speed = 2;
 run_speed = 5;
 jump_speed = 10;
+horiz_speed_ref = 0;
 
 
 // Fractional Correction
