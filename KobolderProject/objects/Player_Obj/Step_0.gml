@@ -17,21 +17,49 @@ key_right = keyboard_check(ord("D"));
 key_shift = keyboard_check(vk_shift);
 key_jump = keyboard_check_pressed(vk_space);
 key_attack = keyboard_check_pressed(ord("F"));
+key_dash = keyboard_check_pressed(vk_control);
 
 
 // Movement Calculations
 
+// - Dashing Check
+
+if (key_left) && (!key_right) { currentMove = "left"; }
+else if (key_right) && (!key_left) { currentMove = "right"; }
+else { currentMove = "still"; lastStopped = current_time;}
+
+if (isDashing == false) && (currentMove == lastMoved) && ( (current_time - timeMarked) < 250) 
+{
+	isDashing = true;
+	timeDashed = current_time;
+	dashX = (key_right - key_left) * dashSpeed; 
+}
+
+// -
+
 	//var y_move = key_up + key_down + grav;
-if (key_shift == 0) { x_move = (key_right - key_left) * walk_speed; }
-	else { x_move = (key_right - key_left) * run_speed; }
+if (isDashing == true)
+{
+	// nothing
+}
+else if (key_shift == 0) 
+{
+	x_move = (key_right - key_left) * walk_speed; 
+}
+else 
+{
+	x_move = (key_right - key_left) * run_speed; 
+}
+
+if (isDashing) { horiz_speed =+ dashX } else { horiz_speed += x_move };
 
 getPixelBottomLeft = tilemap_get_at_pixel(collisionTileMap, bbox_left, bbox_bottom+1);
 getPixelBottomRight = tilemap_get_at_pixel(collisionTileMap, bbox_right, bbox_bottom+1);
 
 if (getPixelBottomLeft == 1) || (getPixelBottomRight == 1) { onGround = true; currentJump = 0; } 
 	else { onGround = false; }
-	
-if (key_jump)
+
+if (key_jump) && (isDashing == false)
 {
 	if (onGround == true)
 	{
@@ -45,8 +73,10 @@ if (key_jump)
 	}
 }
 
-horiz_speed += x_move;
-vert_speed += grav;
+
+
+if (isDashing == true) { vert_speed = 0;} 
+	else { vert_speed += grav; }
 
 // Fractional Correction
 
@@ -54,6 +84,7 @@ vert_speed += grav;
 horiz_speed += horiz_speed_fractional;
 vert_speed += vert_speed_fractional;
 
+// -
 // - Storing Fractionals and Subtracting
 horiz_speed_fractional = horiz_speed - floor(abs(horiz_speed)) * sign(horiz_speed);
 vert_speed_fractional = vert_speed - floor(abs(vert_speed)) * sign(vert_speed);
@@ -61,6 +92,8 @@ vert_speed_fractional = vert_speed - floor(abs(vert_speed)) * sign(vert_speed);
 horiz_speed -= horiz_speed_fractional;
 vert_speed -= vert_speed_fractional;
 
+//-
+//
 
 // Collision Controls
 
@@ -76,6 +109,7 @@ if ((tilemap_get_at_pixel(collisionTileMap, boundingBoxSide + horiz_speed, bbox_
 		horiz_speed = 0;
 }
 
+// -
 // - Vertical Collision
 
 if (vert_speed > 0) { boundingBoxSide = bbox_bottom; } 
@@ -89,8 +123,14 @@ if ((tilemap_get_at_pixel(collisionTileMap, bbox_left, boundingBoxSide + vert_sp
 		vert_speed = 0;
 }
 
+// -
+//
+
+
 x += horiz_speed;
 y += vert_speed;
+
+// Depreciated
 
 /* Old Code
 
@@ -144,9 +184,11 @@ if ( key_jump )
 
 //if (key_attack) instance_create_layer(x, y, "Attack_Lyr", Swipe_Obj);
 
+// 
 
 
 // Animations
+
 /*
 	Sprint Index:
 	0 - Ground Right
@@ -159,6 +201,7 @@ if ( key_jump )
 	7 - Down Center
 	8 - Down Left
 */
+
 if (onGround)				// on ground
 {
 	if ( horiz_speed == 0 ) image_index = 1; else image_index = 0;
@@ -175,10 +218,21 @@ else
 	}
 }
 
+// Image flipping for left/right
+
 if (horiz_speed != 0) image_xscale = sign(horiz_speed);
+
+
+//
+
+// End Dash
+if (isDashing == true) && (current_time - timeDashed > dashLength) { isDashing = false; timeDashed = 0; }
 
 horiz_speed = 0;
 
+timeIndex = current_time;
+
+// Depreciated code
 		/*
 		if (onGround)
 		{
@@ -202,4 +256,4 @@ horiz_speed = 0;
 			}
 		}
 		*/
-
+//

@@ -3,6 +3,7 @@
 
 // Global
 tileSize = 64;
+timeIndex = current_time;
 
 
 // Sprite Reference
@@ -34,3 +35,14 @@ currentJump = 0;
 
 // Tilemap reference
 collisionTileMap = layer_tilemap_get_id("Collision_Lyr");
+
+// Dash variables
+dashX = 0;
+dashSpeed = 16;
+dashLength = 0.6 * 1000; // 1000 counts for 1 second
+currentMove = "null;"
+lastMoved = "null";
+lastStopped = 0;
+timeMarked = 0;
+isDashing = false;
+timeDashed = 0;
