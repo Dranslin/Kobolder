@@ -45,6 +45,17 @@ if (key_jump)
 	}
 }
 
+// Begin Variable Hight Jump
+
+if(keyboard_check_released(vk_space))
+{
+	if (vert_speed < 0) // Negitive number means character is rising.
+	{
+		vert_speed = 0;	 // End jump and begin to fall
+	}
+}
+
+
 horiz_speed += x_move;
 vert_speed += grav;
 
